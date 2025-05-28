@@ -1,5 +1,6 @@
 
 # Most code here is from GenerativeMetrics.py
+# under the GPL-3.0 license
 
 import numpy as np 
 from sklearn.neighbors import NearestNeighbors

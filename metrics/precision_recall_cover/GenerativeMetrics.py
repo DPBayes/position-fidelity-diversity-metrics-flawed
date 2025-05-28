@@ -4,7 +4,7 @@
              improved prevision and improved recall, and our proposed metric cover precision and cover recall. 
 '''
 
-# Modified by Ossi Räisä
+# Modified by Ossi Räisä (under GPL-3.0 license), 2024-11-25
 # - remove non-precision recall cover metrics
 
 import numpy as np
