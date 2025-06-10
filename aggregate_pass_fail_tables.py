@@ -125,8 +125,9 @@ if __name__ == "__main__":
         groupdf_list.append(groupdf)
 
     merged_df = pd.concat(groupdf_list, keys=sanity_check_name_list, names=["sanity check"])
-    fidelity_df = merged_df[fidelity_metrics]
-    diversity_df = merged_df[diversity_metrics]
+
+    fidelity_df = merged_df.loc[:, [metric for metric in fidelity_metrics if metric in merged_df.columns]]
+    diversity_df = merged_df.loc[:, [metric for metric in diversity_metrics if metric in merged_df.columns]]
 
     merged_df.to_csv(str(snakemake.output.metric_table))
     fidelity_df.to_csv(str(snakemake.output.fidelity_metric_table))
