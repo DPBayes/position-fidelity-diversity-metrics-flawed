@@ -1,4 +1,4 @@
-# Evaluating Synthetic Data Evaluation Metrics
+Code for the paper [Position: All Current Generative Fidelity and Diversity Metrics are Flawed](http://arxiv.org/abs/2505.22450), accepted to ICML 2025.
 
 ## Installing Dependencies
 We use [Poetry](https://python-poetry.org/) to manage dependencies. Install Poetry 
