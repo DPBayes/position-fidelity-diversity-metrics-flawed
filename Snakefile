@@ -23,7 +23,7 @@ metrics = [
     "alpha-precision;beta-recall;authenticity",
     "precision-recall-cover",
     "sym-precision-recall",
-    # "probabilistic-precision-recall",
+    "probabilistic-precision-recall",
 ]
 
 rule all:

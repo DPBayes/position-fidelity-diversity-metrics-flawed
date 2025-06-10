@@ -3,4 +3,4 @@ from .alpha_precision_beta_recall import AlphaPrecisionBetaRecallComputer
 from .prdc import PRDCComputer
 from .precision_recall_cover.precision_recall_cover_computer import PrecisionRecallCoverComputer
 from .sym_precision_recall.sym_precision_recall_computer import SymPrecisionRecallComputer
-# from .pp_pr import ProbabilisticPrecisionRecallComputer
+from .pp_pr import ProbabilisticPrecisionRecallComputer

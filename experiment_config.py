@@ -1,6 +1,6 @@
 
 from metrics import PRDCComputer, AlphaPrecisionBetaRecallComputer, PrecisionRecallCoverComputer, SymPrecisionRecallComputer
-# from metrics import ProbabilisticPrecisionRecallComputer
+from metrics import ProbabilisticPrecisionRecallComputer
 
 from sanity_checks.gaussian import run_gaussian_mean_difference, run_gaussian_mean_difference_with_outlier
 from sanity_checks.gaussian import run_gaussian_std_difference
@@ -22,7 +22,7 @@ metric_computers = {
     "alpha-precision;beta-recall;authenticity": AlphaPrecisionBetaRecallComputer,
     "precision-recall-cover": PrecisionRecallCoverComputer,
     "sym-precision-recall": SymPrecisionRecallComputer,
-    # "probabilistic-precision-recall": ProbabilisticPrecisionRecallComputer,
+    "probabilistic-precision-recall": ProbabilisticPrecisionRecallComputer,
 }
 
 metrics = list(metric_computers.keys())
@@ -38,8 +38,8 @@ metric_types = {
     "recall_cover": "diversity",
     "sym_precision": "fidelity",
     "sym_recall": "diversity",
-    # "probabilistic_precision": "fidelity",
-    # "probabilistic_recall": "diversity",
+    "probabilistic_precision": "fidelity",
+    "probabilistic_recall": "diversity",
 }
 
 sanity_checks = {
