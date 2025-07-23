@@ -1,7 +1,7 @@
 
-import pickle 
-import ctypes
-import numpy as np 
+import pickle
+import hashlib
+import numpy as np
 import torch
 import pandas as pd
 from experiment_config import metric_computers, sanity_checks, sanity_check_result_level_names
@@ -31,9 +31,9 @@ def get_random_seed(*values):
     Returns:
         int: seed
     """
-    ss = np.random.SeedSequence([
-        ctypes.c_size_t(hash(value)).value for value in values
-    ])
+
+    list_of_hashes = [hashlib.md5(str(value).encode("utf-8"), usedforsecurity=False).digest() for value in values]
+    ss = np.random.SeedSequence([int(hash.hex(), 16) for hash in list_of_hashes])
     return ss.generate_state(1)[0]
 
 
