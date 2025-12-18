@@ -30,3 +30,6 @@ The following code is taken from external sources, with minor modifications. Not
 - precision and recall cover in `metrics/precision_recall_cover`: [https://github.com/FasilCheema/GenerativeMetrics](https://github.com/FasilCheema/GenerativeMetrics), GPL-3.0 license
 - Symmetric precision and recall in `metrics/sym_precision_recall`: [https://github.com/mahyarkoy/emergent_asymmetry_pr](https://github.com/mahyarkoy/emergent_asymmetry_pr), MIT license
 - Probabilistic precision and recall in `metrics/pp_pr.py`: [https://github.com/kdst-team/Probablistic_precision_recall](https://github.com/kdst-team/Probablistic_precision_recall), MIT license
+
+## Fixed RNG Seeding
+The branch `fixed-rng-seeding` contains an implementation with reproducible seeding. This issue was found after publication of the paper, so the fixed code gives different results than reported in the paper for 6 sanity checks.
